@@ -47,16 +47,16 @@ def lists():
     #   first row is [1, 4, 5]
     #   second row is [6, 10, 11]
     #   third row is [12, 17, 38]
-    r = [[1, 4, 5], 
+    A = [[1, 4, 5], 
          [6, 10, 11], 
         [12, 17, 38]]
 
     # Collect the items in the last column of matrix A using list comprehension
-    c = [y[i][-1] for i in range(0,3)]
+    c = [A[i][-1] for i in range(0,3)]
 
     # Collect only the even items of the diagonal of matrix A using list comprehension
-    t = [y[i][j] for i in range(0,3) for j in range(0,3) if i==j]
-    d = [i for i in t if i % 2 == 0]
+    t = [A[i][j] for i in range(0,3) for j in range(0,3) if i==j] #get the diagonal items of matrix A
+    d = [i for i in t if i % 2 == 0] #get the even items
 
     # We can convert a single character to its underlying integer code (e.g., its ASCII byte value)
     # by passing it to the built-in ord function. Generate a list of these integers to represent
