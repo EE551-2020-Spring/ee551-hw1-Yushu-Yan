@@ -38,7 +38,7 @@ def lists():
     n = "Stevens is awesome"
 
     # Split variable n on a delimiter space into a list of substrings
-    n = list(n)
+    p = n.split(n)
 
     # Get all the items past the first of the third substring
     p = n[:int(len(n)/3)]
@@ -52,28 +52,16 @@ def lists():
         [12, 17, 38]]
 
     # Collect the items in the last column of matrix A using list comprehension
-    c = []
-    c.append(r[0][-1])
-    c.append(r[1][-1])
-    c.append(r[2][-1])
+    c = [y[i][-1] for i in range(0,3)]
 
     # Collect only the even items of the diagonal of matrix A using list comprehension
-    d = []
-    d.append(r[1][1])
-    d.append(r[2][2])
+    t = [y[i][j] for i in range(0,3) for j in range(0,3) if i==j]
+    d = [i for i in t if i % 2 == 0]
 
     # We can convert a single character to its underlying integer code (e.g., its ASCII byte value)
     # by passing it to the built-in ord function. Generate a list of these integers to represent
     # each character of the string "Stevens" using list comprehension.
-    t = list(n)
-    o = []
-    o.append(ord(t[0]))
-    o.append(ord(t[1]))
-    o.append(ord(t[2]))
-    o.append(ord(t[3]))
-    o.append(ord(t[4]))
-    o.append(ord(t[5]))
-    o.append(ord(t[6]))
+    o = [ord(i) for i in "Stevens"]
 
     return p, r, c, d, o
 
