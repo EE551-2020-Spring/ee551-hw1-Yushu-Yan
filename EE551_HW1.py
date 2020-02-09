@@ -42,6 +42,7 @@ def lists():
     n = list(n)
 
     # Get all the items past the first of the third substring
+    p = n[:int(len(n)/3)]
 
     # Create a 3 x 3 matrix as nested list such that
     #   first row is [1, 4, 5]
