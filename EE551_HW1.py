@@ -55,8 +55,8 @@ def lists():
     c = [A[i][-1] for i in range(0,3)]
 
     # Collect only the even items of the diagonal of matrix A using list comprehension
-    t = [A[i][j] for i in range(0,3) for j in range(0,3) if i==j] #get the diagonal items of matrix A
-    d = [i for i in t if i % 2 == 0] #get the even items
+    d = [A[i][j] for i in range(0,3) for j in range(0,3) if i==j] #get the diagonal items of matrix A
+    d = [i for i in d if i % 2 == 0] #get the even items
 
     # We can convert a single character to its underlying integer code (e.g., its ASCII byte value)
     # by passing it to the built-in ord function. Generate a list of these integers to represent
